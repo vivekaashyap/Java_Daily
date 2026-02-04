@@ -1,5 +1,5 @@
 
-public class _Spriral {
+public class _4Spriral {
 
     public static void main(String[] args) {
         int mat[][] = {
