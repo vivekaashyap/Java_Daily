@@ -9,14 +9,14 @@ public class _100revision {
     }
 
     public static boolean search(int arr[][], int key) {
-        int strow = 0, edrow = arr.length - 1;
-        while (strow < arr.length && edrow >= 0) {
-            if (arr[strow][edrow] == key) {
+        int row = 0, col = arr.length - 1;
+        while (row < arr.length && col >= 0) {
+            if (arr[row][col] == key) {
                 return true;
-            } else if (arr[strow][edrow] > key) {
-                edrow--;
+            } else if (arr[row][col] > key) {
+                col--;
             } else {
-                strow++;
+                row++;
             }
         }
         return false;
