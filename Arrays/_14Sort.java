@@ -5,17 +5,18 @@ public class _14Sort {
         int arr[] = {2, 3, 4, 6, 1};
         bubble(arr);
         selection(arr);
-        insertion(arr);
+        // insertion(arr);
     }
 
-    public static void insertion(int arr[]) {
-        for (int i = 1; i < arr.length; i++) {
-            int key = arr[i];
-            int j = i - 1;
-
-        }
-    }
-
+    // public static void insertion(int arr[]) {
+    //     // int arr[] = {2, 3, 4, 6, 1};
+    //     for (int i = 1; i < arr.length; i++) {
+    //         int key = arr[i];
+    //         int j = i - 1;
+    //         while () {
+    //         }
+    //     }
+    // }
     public static void selection(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             int pos = i;
