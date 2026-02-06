@@ -55,12 +55,40 @@ public class LL {
         return count;
     }
 
-    public String deleteFirst() {
+    public String deleteAtFirst() {
         if (head == null) {
             return "No data to be deleted"; //Exception throw
         }
+        String deleteValue = head.data;
+        head = head.next;
+        size--;
+        return deleteValue;
     }
 
+    public String deleteLast() {
+        if (head == null) {
+            return "No data to be deleted"; // Exception throw
+        }
+        size--;
+        if (head.next == null) {
+            //only single node 
+            String deletedValue = head.data;
+            head = null;
+            return deletedValue;
+        }
+        //atleast 2 nodes
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        String deletedValue = temp.next.data;
+        temp.next = null;
+        return deletedValue;
+    }
+
+    // public String deletedAtAnyPosition(int pos) {
+    // }
+    //Searching and updation
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -71,10 +99,12 @@ public class LL {
 
     public static void main(String[] args) {
         LL obj = new LL();
+        System.out.println(obj.deleteAtFirst());
         obj.insertAtFirst("Wei");
         obj.insertAtLast("Wuxian");
         obj.insertAtFirst("WanG");
         obj.display();
+        System.out.println(obj.deleteAtFirst());
         System.out.println(obj.length());
     }
 }
