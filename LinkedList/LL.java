@@ -55,6 +55,12 @@ public class LL {
         return count;
     }
 
+    public String deleteFirst() {
+        if (head == null) {
+            return "No data to be deleted"; //Exception throw
+        }
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
