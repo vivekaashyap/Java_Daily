@@ -1,5 +1,5 @@
 
-public class _01PrintNo {
+public class _02DecreashingOrder {
 
     public static void main(String[] args) {
         int n = 5;
@@ -7,10 +7,11 @@ public class _01PrintNo {
     }
 
     public static void print(int n) {
-        if (n == 0) {
+        if (n == 1) {
+            System.out.println(n);
             return;
         }
-        print(n - 1);
         System.out.println(n);
+        print(n - 1);
     }
 }
