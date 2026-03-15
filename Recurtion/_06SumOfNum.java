@@ -1,5 +1,5 @@
 
-public class _05SumOfNum {
+public class _06SumOfNum {
 
     public static void main(String[] args) {
         int n = 5;
