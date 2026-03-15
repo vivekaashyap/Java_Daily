@@ -1,26 +1,29 @@
 
-public class _5Color_Sort {
+public class ColorSort {
 
     public static void main(String[] args) {
         int[] nums = {2, 0, 2, 1, 1, 0};
-        int st = 0, ed = nums.length - 1, index = 0;
-        while (st < ed) {
-            if (nums[st] == 0) {
-                int temp = nums[st];
-                nums[st] = nums[index];
-                nums[index] = temp;
+        int st = 0, ed = nums.length - 1, i = 0;
+
+        while (i <= ed) {
+            if (nums[i] == 0) {
+                int t = nums[i];
+                nums[i] = nums[st];
+                nums[st] = t;
+                i++;
                 st++;
-                index++;
-            } else if (nums[st] == 2) {
-                int temp = nums[ed];
-                nums[ed] = nums[index];
-                nums[index] = temp;
-                index++;
+            } else if (nums[i] == 2) {
+                int t = nums[i];
+                nums[i] = nums[ed];
+                nums[ed] = t;
                 ed--;
+            } else {
+                i++;
             }
         }
-        for (int i : nums) {
-            System.out.print(i + " ");
+
+        for (int n : nums) {
+            System.out.print(n + " ");
         }
     }
 }
