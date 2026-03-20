@@ -3,7 +3,7 @@ public class _10Pow {
 
     public static void main(String[] args) {
         int x = 2;
-        int n = 3;
+        int n = 5;
         System.out.print(pow(x, n));
     }
 
