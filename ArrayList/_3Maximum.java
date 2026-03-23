@@ -17,5 +17,6 @@ public class _3Maximum {
             }
         }
         System.out.println(max);
+        System.out.println(list);
     }
 }
