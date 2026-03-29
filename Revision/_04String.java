@@ -9,5 +9,6 @@ public class _04String {
             System.out.print(true);
         }
         System.out.print("\u2764" + sb);
+        // 
     }
 }
