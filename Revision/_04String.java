@@ -2,16 +2,18 @@
 public class _04String {
 
     public static void main(String[] args) {
-        String s = "12321";
-        int n = 12321;
-        String sb = new StringBuilder(s).reverse().toString();
-        if (n == Integer.valueOf(sb)) {
-            System.out.print(true);
+        int arr[] = {11, 9, 10};
+        int sum = 0;
+        for (int n : arr) {
+            if (n <= 9) {
+                sum += n;
+            } else {
+                while (n != 0) {
+                    sum += n % 10;
+                    n /= 10;
+                }
+            }
         }
-        System.out.print("\u2764" + sb);
-        // 
-        // 
-        // 
-        // 
+        System.out.println(sum);
     }
 }
