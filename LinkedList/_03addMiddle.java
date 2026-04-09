@@ -53,21 +53,35 @@ public class _03addMiddle{
         head = newNode;
         size++;
     }
-    public int removeAtFirst(){
-        if(size == 0){
+
+    public int removeAtFirst() {
+        if (size == 0) {
             System.out.println("LL is empty");
             return Integer.MIN_VALUE;
-        }
-        else if(size==1){
+        } else if (size == 1) {
             int val = head.data;
-            head=tail=null;
+            head = tail = null;
             size = 0;
             return val;
-        }     
+        }
         int val = head.data;
         head = head.next;
         return val;
-    }    
+    }
+
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+        Node next;
+        tail = head;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
     public int removeAtLast(){
         if(size == 0) {
             head = tail = null;
@@ -101,6 +115,8 @@ public class _03addMiddle{
         ll.print();
         // ll.size();
         System.out.println("\n"+ll.size);
+        ll.reverse();
+        ll.print();
     }
 
 }
