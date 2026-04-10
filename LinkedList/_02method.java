@@ -46,14 +46,19 @@ public class _02method {
         }
     }
 
-    public void addinmiddle(int index, int data) {
+
+    public void addinmiddle(int inx, int data) {
+        if (inx == 0) {
+            addAtFirst(data);
+            return;
+        }
         Node newNode = new Node(data);
         Node temp = head;
-        while (index != 0) {
+        for (int i = 0; i < inx - 1; i++) {
             temp = temp.next;
-            index--;
         }
-
+        newNode.next = temp.next;
+        temp.next = newNode;
     }
 
     public static void main(String[] args) {
