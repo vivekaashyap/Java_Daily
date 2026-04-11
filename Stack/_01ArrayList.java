@@ -1,4 +1,4 @@
-
+ 
 import java.util.*;
 
 public class _01ArrayList {
@@ -39,7 +39,7 @@ public class _01ArrayList {
         s.push(4);
         s.push(5);
         while (!s.isEmpty()) {
-            System.out.println(s.peek());
+            System.out.print(s.peek()+" ");
             s.pop();
         }
     }

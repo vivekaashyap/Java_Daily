@@ -17,7 +17,6 @@ public class _03PustAtBottom {
         Stack<Integer> s = new Stack<>();
         s.push(1);
         s.push(2);
-
         s.push(3);
         int n = 4;
         pushAtBottom(s, n);
