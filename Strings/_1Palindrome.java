@@ -12,6 +12,7 @@ public class _1Palindrome {
             }
             st++;
             ed--;
+            // 
         }
         System.out.println(isplaindrome);
     }
