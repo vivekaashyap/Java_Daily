@@ -17,6 +17,7 @@ public class _1BubbleSort {
                 break;
             }
         }
+        
         for (int i : arr) {
             System.out.print(i + " ");
         }
